@@ -87,3 +87,20 @@ export const GAMES: Game[] = [
     { id: 'persona', name: 'Persona', title: 'Interface com personalidade', text: 'Um menu não precisa ser apenas funcional, ele também pode transmitir personalidade. Persona me mostrou como cores, animações e elementos visuais podem criar uma identidade marcante sem comprometer a clareza e a facilidade de uso.' },
     { id: 'pokemon', name: 'Pokemon', title: 'Simplicidade que gera profundidade', text: 'Pokémon combina regras relativamente simples para criar sistemas cheios de possibilidades. Essa ideia me inspira no desenvolvimento back-end, contruir estruturas organizadas, com responsabilidades bem definidas, capazes de crescer sem perder consistência.' },    { id: 'hollow', name: 'Hollow Knight', title: 'Menos, mas com propósito', text: 'Cada detalhe contribui para a atmosfera e a experiência do jogador em Hollow Knight, essa atenção ao essencial me inspira a desenvolver interfaces mais limpas e funcionais. Entre adicionar por adicionar e simplificar, prefiro manter apenas o que realmente faz sentido.' },
 ];
+
+export type SectionId = 'sobre' | 'projetos' | 'jogos' | 'contato';
+
+export const ASSIST: Record<'hello' | SectionId, string> = {
+    hello: 'Oi! Eu sou o Ruan em Pixels, seu guia por aqui. Explore o portfólio e, conforme avançar, estarei por perto para apresentar cada seção, Vamos nessa?',
+    sobre: 'Hora de conhecer quem está por trás do código! Aqui esta uma parte da minha trajetória, minhas habilidades e os conhecimentos que continuo aprimorando.',
+    projetos: 'Aqui estão alguns dos projetos que desenvolvi e compartilhei no Github. Escolha um para conhecer suas funcionalidades, as tecnologias utilizadas e explorar o código por dentro!',
+    jogos: 'Aqui estão alguns dos jogos que marcaram minha jornada e as ideias que levei de cada um para o desenvolvimento. Explore as abas para descobrir o que aprendi com eles!',
+    contato: 'Chegamos ao fim da jornada! Se gostou do que viu ou acredita que podemos construir algo juntos, aqui estão meus contatos para continuarmos essa conversa!',
+};
+
+export const SECTIONS: SectionId[] = ['sobre', 'projetos', 'jogos', 'contato'];
+
+export const SPRITE = {
+    idle: '/img/ruan.png',
+    talk: [] as string[], 
+}
