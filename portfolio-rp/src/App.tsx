@@ -6,6 +6,7 @@ import { Projects } from "./components/Projects";
 import { Games } from "./components/Games";
 import { Contact } from "./components/Contact";
 import { useKonami } from "./hooks/useKonami";
+import { Assistant } from "./components/Assistant";
 
 export default function App() {
   const [toast, setToast] = useState('');
@@ -28,7 +29,7 @@ export default function App() {
 
   return (
     <>
-      <Motes />
+      <Motes /> <Assistant />
       <div className="slash" aria-hidden="true" />
 
       <header className="top">

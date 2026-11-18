@@ -103,7 +103,8 @@ export const SECTIONS: SectionId[] = ['sobre', 'projetos', 'jogos', 'contato'];
 export const SPRITE = {
     idle: '/img/ruan.png',
     talk: [] as string[], 
-}
+    jump: '',
+};
 
 export const ABOUT = {
   title: 'Desenvolvo aplicações web do back-end à interface',
