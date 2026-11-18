@@ -4,6 +4,7 @@ import { useTypewriter } from '../hooks/useTypewriter';
 import { ASSIST } from '../data/content';
 import { useSpeaker } from '../hooks/useSpeaker';
 import { Pixel } from './Pixel';
+import { useSound } from '../lib/sound';
 
 type Phase = 'typing' | 'choices' | 'reply';
 
@@ -11,7 +12,7 @@ export function Hero({ onToast }: { onToast: (msg: string) => void }) {
   const { shown, typing, say, skip } = useTypewriter();
   const [phase, setPhase] = useState<Phase>('typing');
   const [reply, setReply] = useState<Reply | null>(null);
-  const [sound, setSound] = useState(false);
+  const [sound, setSound] = useSound();
   const hello = useSpeaker();
   const choicesRef = useRef<HTMLDivElement>(null);
 
@@ -91,7 +92,7 @@ export function Hero({ onToast }: { onToast: (msg: string) => void }) {
             className="dialog__sound"
             type="button"
             aria-pressed={sound}
-            onClick={() => setSound((s) => !s)}
+            onClick={() => setSound(!sound)}
           >
             {sound ? 'Som ligado' : 'Som desligado'}
           </button>

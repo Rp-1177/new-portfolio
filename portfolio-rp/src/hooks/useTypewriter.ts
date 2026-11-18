@@ -1,4 +1,5 @@
 import { useCallback, useRef, useState } from 'react';
+import { blip } from '../lib/sound';
 
 const prefersReduced = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -30,6 +31,7 @@ export function useTypewriter() {
                 if (id !== run.current) return;
                 i++;
                 setShown(text.slice(0,i));
+                if (text[i - 1] !== ' ') blip(); // espaço não faz barulho
                 if (i >= text.length) {
                     setTyping(false);
                     return resolve();

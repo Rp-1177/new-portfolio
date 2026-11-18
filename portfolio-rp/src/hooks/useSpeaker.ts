@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { blip } from "../lib/sound";
 
 const prefersReduced = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -33,6 +34,7 @@ export function useSpeaker() {
       for (let i = 1; i <= str.length; i++) {
         if (run.current !== id) return; // outra fala começou
         setText(str.slice(0, i));
+        if (str[i - 1] !== '  ') blip(430); // voz um pouco mais aguda que a da caixa do hero
         await new Promise((r) => setTimeout(r, /[.,!?:]/.test(str[i - 1]) ? 180 : 22));
       }
     }
