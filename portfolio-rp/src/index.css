@@ -455,7 +455,18 @@ main, .foot, .top { position: relative; z-index: 1; }
   right: max(16px, env(safe-area-inset-right, 0px));
   bottom: calc(16px + env(safe-area-inset-bottom, 0px));
   display: grid; justify-items: end; gap: 1.1rem;
-  transition: opacity .3s, transform .35s var(--ease), visibility .3s;
+   pointer-events: none;
 }
-.buddy:not(.is-on) { opacity: 0; visibility: hidden; transform: translateY(28px); }
-.buddy__btn { width: clamp(72px, 11vw, 104px); }
+.buddy > * { pointer-events: auto; }
+.buddy__btn { width: clamp(72px, 11vw, 104px); transform-origin: 0 0; transition: opacity .35s; }
+.buddy:not(.is-on) .buddy__btn { opacity: 0; visibility: hidden; transition: opacity .35s, visibility 0s .35s; }
+
+/* Pulo do hero até o canto da tela */
+.hero__sprite::before { transition: opacity .5s; }
+.hero__btn { transition: opacity .5s; }
+.hero__sprite.is-away::before { opacity: 0; }
+.hero__sprite.is-away .bubble--hero { display: none; }
+.hero__sprite.is-away .hero__btn { opacity: 0; visibility: hidden; transition: none; }
+.is-air .spr { scale: .95 1.07; transform-origin: 50% 100%; }
+.is-land .spr { animation: land .35s ease-out; transform-origin: 50% 100%; }
+@keyframes land { 0% { scale: 1.12 .86; } 60% { scale: .97 1.04; } 100% { scale: 1; } }

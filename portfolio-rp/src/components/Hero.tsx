@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { CHOICES, SCRIPT, type Reply, type ReplyKey } from '../data/content';
 import { useTypewriter } from '../hooks/useTypewriter';
-import { Sprite } from './Sprite';
+import { ASSIST } from '../data/content';
+import { useSpeaker } from '../hooks/useSpeaker';
+import { Pixel } from './Pixel';
 
 type Phase = 'typing' | 'choices' | 'reply';
 
@@ -10,6 +12,7 @@ export function Hero({ onToast }: { onToast: (msg: string) => void }) {
   const [phase, setPhase] = useState<Phase>('typing');
   const [reply, setReply] = useState<Reply | null>(null);
   const [sound, setSound] = useState(false);
+  const hello = useSpeaker();
   const choicesRef = useRef<HTMLDivElement>(null);
 
   // Sequência de entrada: dispara a animação do CSS e depois escreve a primeira fala
@@ -60,7 +63,23 @@ export function Hero({ onToast }: { onToast: (msg: string) => void }) {
           <span className="name-line"><span>Pablo</span></span>
         </h1>
         <p className="hero__role">Desenvolvedor full-stack júnior</p>
-        <div className="hero__sprite" aria-hidden="true"><Sprite /></div>
+        <div className="hero__sprite">
+          {hello.open && (
+    <p className="bubble bubble--hero">
+      <span className="bubble__text" aria-hidden="true">{hello.text}</span>
+    </p>
+  )}
+  <p className="sr" aria-live="polite">{hello.talking ? '' : hello.text}</p>
+  <button
+    key={hello.hopKey}
+    className={`hero__btn${hello.talking ? ' is-talk' : ''}${hello.hopping ? ' is-hop' : ''}`}
+    type="button"
+    aria-label="Cumprimentar o Ruan"
+    onClick={() => (hello.open ? hello.hush() : hello.say(ASSIST.hello))}
+  >
+    <Pixel talking={hello.talking} />
+  </button>
+</div>
 
         <section
           className="dialog"

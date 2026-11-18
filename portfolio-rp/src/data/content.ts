@@ -104,3 +104,32 @@ export const SPRITE = {
     idle: '/img/ruan.png',
     talk: [] as string[], 
 }
+
+export const ABOUT = {
+  title: 'Desenvolvo aplicações web do back-end à interface',
+  paragraphs: [
+    'Sou formado em Análise e Desenvolvimento de Sistemas e estou iniciando minha trajetória como desenvolvedor Full Stack. Gosto de aprender construindo. Cada projeto que desenvolvo nasce de uma ideia, um desafio ou algo que quero entender melhor na prática.',
+    'Atualmente, estou aprofundando meus conhecimentos em APIs REST, TypeScript e Docker, enquanto busco minha primeira oportunidade para colaborar com uma equipe, aprender com profissonais experientes e contribuir con soluções reais.',
+  ],
+};
+
+export const SHEET: { title: string; items: string[] }[] = [
+  { title: 'Uso nos meus projetos', items: ['JavaScript', 'TypeScript', 'React', 'Node.js', 'Prisma', 'Vitest', 'Tailwind CSS', 'Express'] },
+  { title: 'Aprofundando agora', items: ['APIs REST', 'Docker', 'Boas práticas de desenvolvimento' ] },
+  { title: 'Ferramentas', items: ['Git', 'GitHub', 'PostgreSQL', 'PostMan', 'VS Code'] },
+  { title: 'Meu jeito de desenvolver', items: ['Aprender construindo', 'Entender os problemas', 'Buscar soluções simples e bem estruturadas' ] },
+];
+
+export type ContactLink = {
+  label: string;
+  sub: string;
+  href: string;
+  external?: boolean;
+  download?: boolean;
+};
+
+export const CONTACT: ContactLink[] = [
+  { label: 'Enviar e-mail', sub: 'rpnascimento1177@gmail.com', href: 'mailto:rpnascimento1177@gmail.com' },
+  { label: 'Abrir GitHub', sub: 'github.com/Rp-1177', href: 'https://github.com/Rp-1177', external: true },
+  { label: 'Abrir LinkedIn', sub: 'linkedin.com/in/rp1177', href: 'https://www.linkedin.com/in/rp1177', external: true },
+];
