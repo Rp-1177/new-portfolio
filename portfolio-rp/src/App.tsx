@@ -5,10 +5,12 @@ import { About } from "./components/About";
 import { Projects } from "./components/Projects";
 import { Games } from "./components/Games";
 import { Contact } from "./components/Contact";
-import { useKonami } from "./hooks/useKonami";
+import { ThemeButton } from "./components/ThemeButton";
 import { Assistant } from "./components/Assistant";
+import { useActiveSection } from "./hooks/useActiveSection";
 
 export default function App() {
+  const active = useActiveSection();
   const [toast, setToast] = useState('');
   const timer = useRef<number | undefined>(undefined);
 
@@ -18,17 +20,9 @@ export default function App() {
     timer.current = window.setTimeout(() => setToast(''), 3200);
   }, []);
 
-  const toggleTheme = useCallback(() => {
-    const root = document.documentElement;
-    const on = root.dataset.theme === 'p';
-    if (on) delete root.dataset.theme; else root.dataset.theme = 'p';
-    showToast(on ? 'Tema original de volta.' : 'Modo vermelho ligado. Repita o código para voltar.');
-  }, [showToast]);
-
-  useKonami(toggleTheme);
-
   return (
     <>
+    <a className="skip" href="#conteudo">Pular para o conteúdo</a>
       <Motes /> <Assistant />
       <div className="slash" aria-hidden="true" />
 
@@ -37,16 +31,23 @@ export default function App() {
           <a className="top__brand" href="#inicio">Dev</a>
           <nav aria-label="Principal">
             <ul className="nav">
-              <li><a className="nav__link sel" href="#sobre">Sobre</a></li>
-              <li><a className="nav__link sel" href="#projetos">Projetos</a></li>
-              <li><a className="nav__link sel" href="#jogos">Jogos</a></li>
-              <li><a className="nav__link sel" href="#contato">Contato</a></li>
+              {(['sobre', 'projetos', 'jogos', 'contato'] as const).map((id) => (
+                <li key={id}>
+                  <a
+                    className="nav__link sel"
+                    href={`#${id}`}
+                    aria-current={active === id ? 'true' : undefined}
+                  >
+                    {id[0].toUpperCase() + id.slice(1)}
+                  </a>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
       </header>
 
-      <main>
+      <main id="conteudo" tabIndex={-1}>
         <Hero onToast={showToast} />
         <About />
         <Projects />
@@ -57,7 +58,8 @@ export default function App() {
       <footer className="foot">
         <div className="wrap foot__row">
           <p>Feito com React, TypeScript e Motion.</p>
-          <p>Dica: ↑ ↑ ↓ ↓ ? ? ? ? B A</p>
+          <p className="foot__hint">Dica: ↑ ↑ ↓ ↓ ? ? ? ? B A</p>
+          <ThemeButton />
         </div>
       </footer>
 

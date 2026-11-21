@@ -72,7 +72,6 @@ export function Hero({ onToast }: { onToast: (msg: string) => void }) {
   )}
   <p className="sr" aria-live="polite">{hello.talking ? '' : hello.text}</p>
   <button
-    key={hello.hopKey}
     className={`hero__btn${hello.talking ? ' is-talk' : ''}${hello.hopping ? ' is-hop' : ''}`}
     type="button"
     aria-label="Cumprimentar o Ruan"
@@ -92,6 +91,7 @@ export function Hero({ onToast }: { onToast: (msg: string) => void }) {
             className="dialog__sound"
             type="button"
             aria-pressed={sound}
+            aria-label="Som da digitação"
             onClick={() => setSound(!sound)}
           >
             {sound ? 'Som ligado' : 'Som desligado'}
@@ -127,7 +127,7 @@ export function Hero({ onToast }: { onToast: (msg: string) => void }) {
                   a.href ? (
                     <a key={a.label} className="act sel" href={a.href}
                        {...(a.external ? { target: '_blank', rel: 'noopener' } : {})}>
-                      {a.label}
+                      {a.label}<span className="sr"> (abre em nova aba)</span>
                     </a>
                   ) : (
                     <button key={a.label} className="act sel" type="button" onClick={() => onToast(a.toast ?? '')}>

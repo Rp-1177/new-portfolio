@@ -19,7 +19,7 @@ export function Contact() {
                                 {...(c.external ? { target: '_blank', rel: 'noopener' } : {})}
                             >
                                 {c.label}
-                                <span className="big__sub">{c.sub}</span>
+                                <span className="big__sub">{c.sub}</span><span className="sr"> (abre em nova aba)</span>
                             </a>
                         </li>
                     ))}

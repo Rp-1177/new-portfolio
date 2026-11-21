@@ -48,7 +48,7 @@ function Item({ p, open, onToggle }: { p: Project; open: boolean; onToggle: () =
                 <ul className="tags" aria-label="Tecnologias">
                   {p.tags.map((t) => <li key={t}>{t}</li>)}
                 </ul>
-                <a className="link sel" href={p.href} target="_blank" rel="noopener">Abrir no GitHub</a>
+                <a className="link sel" href={p.href} target="_blank" rel="noopener">Abrir no GitHub<span className="sr"> (abre em nova aba)</span></a>
               </div>
               <Tree text={p.tree} />
             </div>

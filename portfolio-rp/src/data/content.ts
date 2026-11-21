@@ -30,7 +30,7 @@ export const SCRIPT: {
             ],
         },
         curious : {
-            text: 'Então fique à vontade! Quando não estou programando, costumo me perder em mundos fictícios, boas histórias e mecânicas de jogos que sempre têm algo novo a ensinar, aliás, tem um segredo por aqui...talvez uma combinação de teclas revele algo!',
+            text: 'Então fique à vontade! Quando não estou programando, costumo me perder em mundos fictícios, boas histórias e mecânicas de jogos que sempre têm algo novo a ensinar, aliás, tem um segredo por aqui...talvez uma combinação de teclas ou um botão revele algo!',
             actions: [
                 { label: 'Ver minhas inspirações', href: '#jogos' },
                 { label: 'Quero uma dica', toast: 'Digite: ↑ ↑ ↓ ↓ ← → ← → B A' },
@@ -55,7 +55,7 @@ export const PROJECTS: Project[] = [
         id: 'todo-api',
         name: 'To-Do-API',
         summary: 'API REST em desenvolvimento para gerenciar tarefas',
-        text: 'API para gerenciar tarefas, escrita em TypeScript. USa Prisma para conversar com banco de dados, Vitest testar o código e integração com docker.',
+        text: 'API para gerenciar tarefas, escrita em TypeScript. Usa Prisma para conversar com banco de dados, Vitest para testar o código e integração com docker.',
         tags: ['TypesScript', 'Node.js', 'Prisma', 'Express.js', 'Vitest', 'Docker'],
         href: 'https://github.com/Rp-1177/To-Do-API',
         tree: 'To-Do-API/\n├─ prisma/\n├─ src/\n├─ .env.example\n├─ package.json\n├─ requests.http\n├─ tsconfig.json\n└─ vitest.config.ts',
@@ -73,7 +73,7 @@ export const PROJECTS: Project[] = [
         id: 'portfolio',
         name: 'Portfolio-rp',
         summary: 'O site que você está vendo',
-        text: 'Feito com React e TypeScript. Dialogos, partículas, animações, segredo, tema escritos por mim.',
+        text: 'Feito com React e TypeScript. Dialogos, partículas, animações, segredo e tema escritos por mim.',
         tags: ['React', 'TypeScript', 'Vite', 'Motion'],
         href: 'https://github.com/Rp-1177/portfolio-rp',
         tree: 'portfolio-rp/\n├─ public/\n└─ src/\n   ├─ components/\n   ├─ hooks/\n   └─ data/',
@@ -91,10 +91,10 @@ export const GAMES: Game[] = [
 export type SectionId = 'sobre' | 'projetos' | 'jogos' | 'contato';
 
 export const ASSIST: Record<'hello' | SectionId, string> = {
-    hello: 'Oi! Eu sou o Ruan em Pixels, seu guia por aqui. Explore o portfólio e, conforme avançar, estarei por perto para apresentar cada seção, Vamos nessa?',
-    sobre: 'Hora de conhecer quem está por trás do código! Aqui esta uma parte da minha trajetória, minhas habilidades e os conhecimentos que continuo aprimorando.',
-    projetos: 'Aqui estão alguns dos projetos que desenvolvi e compartilhei no Github. Escolha um para conhecer suas funcionalidades, as tecnologias utilizadas e explorar o código por dentro!',
-    jogos: 'Aqui estão alguns dos jogos que marcaram minha jornada e as ideias que levei de cada um para o desenvolvimento. Explore as abas para descobrir o que aprendi com eles!',
+    hello: 'Oi! Eu sou o Ruan em Pixels, seu guia! estarei por perto para apresentar cada seção.',
+    sobre: 'Aqui esta uma parte da minha trajetória, minhas habilidades e os conhecimentos que continuo aprimorando.',
+    projetos: 'Aqui estão alguns dos projetos que desenvolvi e compartilhei no Github. Escolha um para conhecer suas funcionalidades e as tecnologias utilizadas!',
+    jogos: 'Aqui estão alguns dos jogos que marcaram minha jornada e as ideias que levei de cada um para o desenvolvimento.',
     contato: 'Chegamos ao fim da jornada! Se gostou do que viu ou acredita que podemos construir algo juntos, aqui estão meus contatos para continuarmos essa conversa!',
 };
 
@@ -102,15 +102,15 @@ export const SECTIONS: SectionId[] = ['sobre', 'projetos', 'jogos', 'contato'];
 
 export const SPRITE = {
     idle: '/img/ruan.png',
-    talk: [] as string[], 
-    jump: '',
+    talk: ['/img/ruan-meia-boca.png', '/img/ruan-falando.png'], 
+    jump: '/img/ruan-pulando.png',
 };
 
 export const ABOUT = {
   title: 'Desenvolvo aplicações web do back-end à interface',
   paragraphs: [
     'Sou formado em Análise e Desenvolvimento de Sistemas e estou iniciando minha trajetória como desenvolvedor Full Stack. Gosto de aprender construindo. Cada projeto que desenvolvo nasce de uma ideia, um desafio ou algo que quero entender melhor na prática.',
-    'Atualmente, estou aprofundando meus conhecimentos em APIs REST, TypeScript e Docker, enquanto busco minha primeira oportunidade para colaborar com uma equipe, aprender com profissonais experientes e contribuir con soluções reais.',
+    'Atualmente, estou aprofundando meus conhecimentos em APIs REST, TypeScript e Docker, enquanto busco minha primeira oportunidade para colaborar com uma equipe, aprender com profissonais experientes e contribuir com soluções reais.',
   ],
 };
 
