@@ -138,15 +138,15 @@ export const CONTACT: ContactLink[] = [
 export const JOURNAL = {
   title: 'Memórias de um desenvolvedor',
   lead: 'Como tudo começou e os caminhos que me trouxeram até aqui, contados em quatro capítulos.',
-  hello: 'Esse é o meu diário de jornada! Aqui guardo um pouco da minha história. Pode ler com calma, vou ficar por aqui caso precise de alguma coisa!.',
+  hello: 'Esse é o meu diário de jornada! Aqui guardo a minha história. Pode ler com calma, vou ficar por aqui caso precise de algo!.',
   chapters: [
     {
       title: 'O primeiro contato',
-      text: 'Meu interesse por tecnologia começou desde cedo. Na internet, eu passava horas explorando curiosidades e descobrindo coisas novas. Na adolescência, essa curiosidade foi além, comecei a explorar os arquivos internos dos jogos que jogava tentando entender o que existia por trás deles. Também acompanhava um criador de conteúdo que era programador. Ver como ele transformava linhas de código em algo funcional me fascinava. Mesmo sendo experiente, ele cometia erros, testava, corrigia e continuava, aquilo me mostrou que programar também era um processo de tentativa, aprendizado e persistência. Por muito tempo, essa curiosidade continuou comigo, uma curiosidade que começou muito antes de eu entender o que era programar.',
+      text: 'Meu interesse por tecnologia começou desde cedo, na internet, eu passava horas explorando curiosidades e descobrindo coisas novas, na adolescência, essa curiosidade foi além, comecei a explorar os arquivos internos dos jogos que jogava tentando entender o que existia por trás deles. Também acompanhava um criador de conteúdo que era programador, ver como ele transformava linhas de código em algo funcional me fascinava, mesmo sendo experiente, ele cometia erros, testava, corrigia e continuava, aquilo me mostrou que programar também era um processo de tentativa, aprendizado e persistência. Por muito tempo, essa curiosidade continuou comigo, uma curiosidade que começou muito antes de eu entender o que era programar.',
     },
     {
       title: 'A decisão',
-      text: 'Durante a adolescência, continuei me aproximando da tecnologia por meio de cursos de informática, design gráfico e montagem e manutenção de computadores. Aos 18 anos, trabalhei por cerca de um ano realizando instalações de internet em residências. Nesse período, também ajudava minha mãe com as demandas digitais do salão de beleza dela, criava cartazes usando o Canvas, e então comecei a pensar em como a programação poderia me ajudar nisso, como eu poderia desenvolver soluções para facilitar o trabalho dela e ajudar em seu negocio. E foi nesse momento que comecei a enxergar a programação como um caminho que eu realmente queria seguir profissionalmente, decidi estudar pra me tornar um desenvolvedor.',
+      text: 'Durante a adolescência, continuei me aproximando da tecnologia por meio de cursos de informática, design gráfico e montagem e manutenção de computadores. Aos 18 anos, trabalhei por cerca de um ano realizando instalações de internet em residências, nesse período, também ajudava minha mãe com as demandas digitais do salão de beleza dela, criava cartazes usando o Canvas, e então comecei a pensar em como a programação poderia me ajudar nisso, como eu poderia desenvolver soluções para facilitar o trabalho dela e ajudar em seu negocio. E foi nesse momento que comecei a enxergar a programação como um caminho que eu realmente queria seguir profissionalmente, e decidi estudar pra me tornar um desenvolvedor.',
     },
     {
       title: 'A faculdade',
