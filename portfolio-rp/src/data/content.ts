@@ -134,3 +134,27 @@ export const CONTACT: ContactLink[] = [
   { label: 'Abrir GitHub', sub: 'github.com/Rp-1177', href: 'https://github.com/Rp-1177', external: true },
   { label: 'Abrir LinkedIn', sub: 'linkedin.com/in/rp1177', href: 'https://www.linkedin.com/in/rp1177', external: true },
 ];
+
+export const JOURNAL = {
+  title: 'Memórias de um desenvolvedor',
+  lead: 'Como tudo começou e os caminhos que me trouxeram até aqui, contados em quatro capítulos.',
+  hello: 'Esse é o meu diário de jornada! Aqui guardo um pouco da minha história. Pode ler com calma, vou ficar por aqui caso precise de alguma coisa!.',
+  chapters: [
+    {
+      title: 'O primeiro contato',
+      text: 'Meu interesse por tecnologia começou desde cedo. Na internet, eu passava horas explorando curiosidades e descobrindo coisas novas. Na adolescência, essa curiosidade foi além, comecei a explorar os arquivos internos dos jogos que jogava tentando entender o que existia por trás deles. Também acompanhava um criador de conteúdo que era programador. Ver como ele transformava linhas de código em algo funcional me fascinava. Mesmo sendo experiente, ele cometia erros, testava, corrigia e continuava, aquilo me mostrou que programar também era um processo de tentativa, aprendizado e persistência. Por muito tempo, essa curiosidade continuou comigo, uma curiosidade que começou muito antes de eu entender o que era programar.',
+    },
+    {
+      title: 'A decisão',
+      text: 'Durante a adolescência, continuei me aproximando da tecnologia por meio de cursos de informática, design gráfico e montagem e manutenção de computadores. Aos 18 anos, trabalhei por cerca de um ano realizando instalações de internet em residências. Nesse período, também ajudava minha mãe com as demandas digitais do salão de beleza dela, criava cartazes usando o Canvas, e então comecei a pensar em como a programação poderia me ajudar nisso, como eu poderia desenvolver soluções para facilitar o trabalho dela e ajudar em seu negocio. E foi nesse momento que comecei a enxergar a programação como um caminho que eu realmente queria seguir profissionalmente, decidi estudar pra me tornar um desenvolvedor.',
+    },
+    {
+      title: 'A faculdade',
+    text: 'Dois anos depois de decidir seguir na programação, surgiu uma oportunidade de dar um passo importante em direção ao meu objetivo, ingressar no curso de Análise e Desenvolvimento de Sistemas da UNIALFA. Em meio à pandemia, prestei o vestibular e conquistei minha vaga na modalidade EAD. Durante a graduação, tive contato com diferentes áreas da tecnologia, estudando disciplinas como Engenharia de Software, Segurança da Informação, Infraestrutura e Redes, Análise e Projeto de Sistemas, Programação e Banco de Dados. Entre tantos assuntos, foram o desenvolvimento de softwares e o trabalho com banco de dados que despertaram meu interesse e aos poucos, comecei a direcionar meus estudos para o desenvolvimento Front-end e Back-end, nas quais decidi construir minha trajetória profissional.',
+    },
+    {
+      title: 'O próximo nível',
+      text: 'Hoje, com a graduação em Análise e Desenvolvimento de Sistemas concluída, continuo aprofundando meus conhecimentos e transformando o aprendizado em prática, no VS Code, desenvolvo projetos próprios e experimentos para explorar tecnologias como React, TypeScript, Tailwind CSS, Node.js, Express e Docker, além de utilizar ferramentas como Git e GitHub para organizar e compartilhar meu progresso. Gosto de transformar ideias em projetos, experimentar novas possibilidades e aprender com cada desafio que encontro pelo caminho. Agora, busco minha primeiro oportunidade como Desenvolvedor Full Stack Júnior, onde possa colaborar com uma equipe, aprender com outros profissionais e contribuir com soluções de qualidade. Minha jornada até aqui foi construída por curiosidade, decisões e aprendizado, mas essa história está longe de terminar, este é apenas o próximo nível.',
+    },
+  ],
+};

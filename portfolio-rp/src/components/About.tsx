@@ -1,4 +1,5 @@
 import { ABOUT, SHEET } from "../data/content";
+import { Journal } from "./Journal";
 
 export function About() {
     return (
@@ -9,6 +10,7 @@ export function About() {
                     {ABOUT.paragraphs.map((p) => (
                         <p key={p}>{p}</p>
                     ))}
+                    <Journal />
                 </div>
 
                 <aside className="sheet" aria-label="Resumo técnico">
