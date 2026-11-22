@@ -7,9 +7,9 @@
   --alma: #8fe8e2;     /* brilho: partículas e foco */
   --bater: #ff4560;    /* seletor e golpes */
 
-  --font-body: "Schibsted Grotesk", system-ui, -apple-system. "Segoe UI", sans-serif;
+  --font-body: "Schibsted Grotesk Variable", "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-game: "DotGothic16", "MS Gothic", ui-monospace, monospace;
-  --easde: cubic-bezier(.2, .8, .2, 1);
+  --ease: cubic-bezier(.2, .8, .2, 1);
 }
 
 /* Segredo: Konami code troca para este tema */
@@ -594,3 +594,9 @@ body:has(dialog.scroll[open]) { overflow: hidden; }
 }
 .scroll__close:hover, .scroll__close:focus-visible { border-color: var(--alma); color: var(--alma); }
 @media (max-width: 480px) { .scroll__close { flex-basis: 100%; } }
+
+/* Contato no celular: título em cima e endereço embaixo, igual nas 3 linhas */
+@media (max-width: 559px) {
+  .big { flex-direction: column; align-items: flex-start; }
+  .big__sub { overflow-wrap: anywhere; }
+}
