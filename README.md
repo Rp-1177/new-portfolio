@@ -4,7 +4,7 @@ Meu portfólio como desenvolvedor full-stack júnior, feito como o começo de um
 
 **Site:** novo-portfolio-sigma-nine.vercel.app
 
-![Prévia do portfólio](public/site.png)
+![Prévia do portfólio](portfolio-rp/public/site.png)
 
 ## O que tem no projeto:
 
